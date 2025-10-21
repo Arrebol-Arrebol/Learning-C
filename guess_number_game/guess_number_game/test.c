@@ -6,7 +6,7 @@
 void menu()
 {
 	printf("****       1.0 play       ****\n");
-	printf("****       0.0 exit       ****\n");
+	printf("****       2.0 exit       ****\n");
 	printf("******************************\n");
 
 }
@@ -43,6 +43,8 @@ int main()
 	do
 	{
 		menu();
+		if (input == 2)
+			break;
 		printf("请输入数字,是否开始游戏>");
 		scanf("%d", &input);
 
@@ -51,7 +53,7 @@ int main()
 		case 1:
 			game();
 			break;
-		case 0:
+		case 2:
 			printf("退出游戏\n");
 			break;
 
@@ -60,7 +62,7 @@ int main()
 			break;
 		}
 
-	} while (input);
+	} while (1);
 	return 0;
 }
 
